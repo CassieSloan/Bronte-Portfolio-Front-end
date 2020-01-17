@@ -1,0 +1,23 @@
+.flexbox {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 10%;
+
+    .info {
+        width: 40%;
+        p {
+            width: 100%;
+        }
+    }
+
+    .form {
+        width: 40%;
+        input {
+            width: 100%;
+        }
+        textarea {
+            width: 100%;
+        }
+    }
+}
