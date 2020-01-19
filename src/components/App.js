@@ -3,6 +3,7 @@ import Header from "./shared/Header"; //header and navbar
 import Home from "./pages/Home"; //homepage
 import Gallery from "./pages/Gallery"; //gallery
 import Contact from "./pages/Contact"; //contact
+import Blog from "./pages/Blog"; //blog
 
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 
@@ -25,6 +26,10 @@ class App extends Component {
 
                         <Route exact path="/contact">
                             <Contact/>
+                        </Route>
+
+                        <Route exact path="/blog">
+                            <Blog/>
                         </Route>
     
                     </Switch>
