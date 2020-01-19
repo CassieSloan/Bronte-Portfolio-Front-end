@@ -7,6 +7,15 @@
     text-align: center; //change on desktop
     margin: $screen-margin;
 
+    .image-container {
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQgmR3WYDsBfHMTS4SQ5swZ3Em00UjclVxbCA6gTcFrM_abJkKt");
+        background-size: cover;
+        height: $blog-img-height;
+        width: 100%;
+        background-repeat: no-repeat;
+        margin: 5%;
+    }
+
    h3 {
     font-family: $heading-font;
     font-weight: $sub-heading-weight;
@@ -16,13 +25,6 @@
    }
 }
 
-.image-container {
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQgmR3WYDsBfHMTS4SQ5swZ3Em00UjclVxbCA6gTcFrM_abJkKt");
-    background-size: cover;
-    height: $blog-img-height;
-    width: 100%;
-    background-repeat: no-repeat;
-}
 
 //tablet
 @media screen and (min-width: 320px ) {
