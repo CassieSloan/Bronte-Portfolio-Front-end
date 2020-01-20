@@ -10,9 +10,9 @@
     .image-container {
         background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQgmR3WYDsBfHMTS4SQ5swZ3Em00UjclVxbCA6gTcFrM_abJkKt");
         background-size: cover;
+        background-repeat: no-repeat;
         height: $blog-img-height;
         width: 100%;
-        background-repeat: no-repeat;
         margin: 5%;
     }
 

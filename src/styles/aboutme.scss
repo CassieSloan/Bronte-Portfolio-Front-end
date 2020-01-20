@@ -1,0 +1,26 @@
+@import "./shared/variables";
+
+
+.flex-box {
+
+    margin: $screen-margin;
+
+    .image {
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT0CqI8Xtux5jFCZApNESuolAhqV1Ba_OkXlAbZxlH1OvUBvHg9"); 
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: $blog-img-height;
+        width: $blog-img-width;
+    }
+}
+
+//tablet
+@media screen and (min-width: 320px ) {
+
+
+}
+
+//desktop
+@media screen and (min-width: 550px ) {
+
+}
