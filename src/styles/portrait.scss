@@ -1,0 +1,29 @@
+//mobile
+.flexbox {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+
+  .image-container {
+    text-align: center;
+    img {
+      width: 80vw;
+      height: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .flexbox {
+    flex-direction: row;
+    flex-wrap: wrap;
+    .image-container {
+      margin: 1%;
+
+      img {
+        width: 20vw;
+      }
+    }
+  }
+}

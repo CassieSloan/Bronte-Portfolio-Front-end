@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./../../../styles/portrait.scss";
 import ash1 from "../../../images/ash1.jpeg";
 import ash2 from "../../../images/ash2.jpeg";
 import ash3 from "../../../images/ash3.jpeg";
@@ -19,13 +20,27 @@ class Portrait extends Component {
 
   render() {
     const { images } = this.state;
-    return images.map(image => {
-      return (
-        <>
-          <img key={images} src={image} alt="portrait" />;
-        </>
-      );
-    });
+
+    return (
+      <>
+        <div className="flexbox">
+          {images.map(image => {
+            return (
+              <>
+                <div className="image-container">
+                  <img
+                    key={images}
+                    src={image}
+                    alt="portrait"
+                    className="image"
+                  />
+                </div>
+              </>
+            );
+          })}
+        </div>
+      </>
+    );
   }
 }
 
