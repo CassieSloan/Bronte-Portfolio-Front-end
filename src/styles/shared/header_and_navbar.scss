@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap'); //montserrat font
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap"); //montserrat font
 @import "./variables"; //global variables
 
 //mobile
@@ -6,74 +6,68 @@
 //////HEADING
 
 .header {
-    font-size: 200%;
-    text-align: center;
-    font-family: $heading-font;
-    font-weight: 200;
-    letter-spacing: 10%;
+  font-size: 200%;
+  text-align: center;
+  font-family: $heading-font;
+  font-weight: 200;
+  letter-spacing: 10%;
 }
 
 //////NAV BAR
 .navbar {
-    text-align: left;
-    padding: 5%;
-    //insert hamburger code here
+  padding: 5%;
+  margin: 0% 10% 0% 10%;
+  //insert hamburger code here
 }
 
 //tablet
-@media screen and (min-width: 320px ) {
-    .header {
-        font-size: 300%;
-    }
+@media screen and (min-width: 320px) {
+  .header {
+    font-size: 300%;
+  }
 }
 
 //desktop
-@media screen and (min-width: 550px ) {
-    .header {
-        font-size: 400%;
+@media screen and (min-width: 550px) {
+  .header {
+    font-size: 400%;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    // justify-content: space-around;
+
+    .social-icons {
+      text-align: left;
+      padding-right: 10%;
+
+      .twitter {
+        height: 50px;
+        width: 50px;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .instagram {
+        height: 50px;
+        width: 50px;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
     }
-    .navbar {
-        display: flex;
-        flex-direction: row;
-        // justify-content: space-around;
 
-        .social-icons {
-            text-align: left;
-            padding-right: 10%;
+    .nav-link {
+      text-decoration: none;
+      font-family: "Montserrat", sans-serif;
+      color: rgb(255, 255, 255);
+      border-radius: 0.5em;
+      background-color: rgb(167, 142, 182);
+      padding: 3%;
+      margin: 1em;
 
-            .twitter {
-                height: 50px;
-                width: 50px;
-                background-size: cover;
-                background-repeat: no-repeat;     
-            }
-            .instagram {
-                height: 50px;
-                width: 50px;
-                background-size: cover;
-                background-repeat: no-repeat;
-            }
-        }
-
-        .pages {
-            text-align: right;
-            margin-left: 15%;
-        }
-        .nav-link {
-            text-decoration: none;
-            font-family: 'Montserrat', sans-serif;
-            color: rgb(255, 255, 255);
-            border-radius: 0.5em;
-            background-color: rgb(167, 142, 182);
-            padding: 3%;
-            margin: 1em;
-
-                &:hover {
-                    background-color: rgb(155, 87, 140);
-                    transition: 0.25s ease-in;
-                }
-        }
-
-        
+      &:hover {
+        background-color: rgb(155, 87, 140);
+        transition: 0.25s ease-in;
+      }
     }
+  }
 }

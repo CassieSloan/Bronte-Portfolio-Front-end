@@ -20,7 +20,7 @@ class Blog extends Component {
     return (
       <>
         <div className="blog-post-container">
-          <div className="image-container"></div>
+          <div className="image-container">{/* insert image url here */}</div>
           <div className="text-container">
             {posts.map(post => {
               return (
