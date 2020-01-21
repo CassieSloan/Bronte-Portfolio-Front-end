@@ -12,16 +12,8 @@ class Header extends Component {
         <h1 className="header">BRONTE DAVIS</h1>
         <div className="navbar">
           <div className="social-icons">
-            <div
-              className="twitter"
-              styles={{ backgroundImage: `image(${twitter})` }}
-            ></div>
-            <div
-              className="instagram"
-              styles={{ backgroundImage: `image(${instagram})` }}
-            ></div>
-            {/* <img src="src\images\twitter.png" alt="twitter" className="icon"/>
-                        <img src="src\images\instagram.png" alt="instagram" className="icon"/> */}
+            <img src={twitter} alt="twitter" className="icon" />
+            <img src={instagram} alt="instagram" className="icon" />
           </div>
           <div className="pages">
             <BrowserRouter>
