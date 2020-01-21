@@ -28,12 +28,7 @@ class Portrait extends Component {
             return (
               <>
                 <div className="image-container">
-                  <img
-                    key={images}
-                    src={image}
-                    alt="portrait"
-                    className="image"
-                  />
+                  <img key={images} src={image} alt="portrait" />
                 </div>
               </>
             );

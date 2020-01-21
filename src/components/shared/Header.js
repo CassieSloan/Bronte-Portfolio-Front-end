@@ -23,8 +23,8 @@ class Header extends Component {
             {/* <img src="src\images\twitter.png" alt="twitter" className="icon"/>
                         <img src="src\images\instagram.png" alt="instagram" className="icon"/> */}
           </div>
-          <BrowserRouter>
-            <div className="pages">
+          <div className="pages">
+            <BrowserRouter>
               <Link to="/" className="nav-link">
                 Home
               </Link>
@@ -40,8 +40,8 @@ class Header extends Component {
               <Link to="/blog" className="nav-link">
                 Blog
               </Link>
-            </div>
-          </BrowserRouter>
+            </BrowserRouter>
+          </div>
         </div>
       </>
     );
