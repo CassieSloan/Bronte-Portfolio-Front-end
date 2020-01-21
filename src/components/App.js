@@ -6,6 +6,7 @@ import Contact from "./pages/Contact"; //contact
 import Blog from "./pages/Blog"; //blog
 import Aboutme from "./pages/About_me"; //about me
 import Portrait from "./pages/gallery_genres/Portrait";
+import Footer from "./shared/Footer";
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
@@ -41,6 +42,7 @@ class App extends Component {
             </Route>
           </Switch>
         </BrowserRouter>
+        <Footer />
       </>
     );
   }

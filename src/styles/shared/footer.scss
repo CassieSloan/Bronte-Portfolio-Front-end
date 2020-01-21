@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap"); //montserrat font
+@import "./variables"; //global variables
+
+.footer {
+  font-family: $heading-font;
+  font-size: 75%;
+  text-align: center;
+  margin: 5%;
+}
