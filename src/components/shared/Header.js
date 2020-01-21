@@ -15,8 +15,17 @@ class Header extends Component {
             <img src={twitter} alt="twitter" className="icon" />
             <img src={instagram} alt="instagram" className="icon" />
           </div>
+
           <div className="pages">
             <BrowserRouter>
+              <button
+                class="hamburger hamburger--slider is-active"
+                type="button"
+              >
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+              </button>
               <Link to="/" className="nav-link">
                 Home
               </Link>
