@@ -31,10 +31,23 @@ class Header extends Component {
       return "block";
     }
   };
+  hideHeader = () => {
+    function setScreenSize() {
+      console.log("resized to: ", window.innerWidth, "x", window.innerHeight);
+    }
+    window.addEventListener("resize", setScreenSize);
+    if (this.state.menuClosed === true && window.innerWidth < 550) {
+      return "block";
+    } else {
+      return "none";
+    }
+  };
   render() {
     return (
       <>
-        <h1 className="header">BRONTE DAVIS</h1>
+        <h1 className="header" style={{ display: `${this.hideHeader()}` }}>
+          BRONTE DAVIS
+        </h1>
         <div className="navbar">
           <div className="social-icons">
             <img src={twitter} alt="twitter" className="icon" />
