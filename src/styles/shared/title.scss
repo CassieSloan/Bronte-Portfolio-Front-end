@@ -1,0 +1,21 @@
+@import "./variables"; //global variables
+
+.header {
+  font-size: 200%;
+  text-align: center;
+  font-family: $heading-font;
+  font-weight: 200;
+  letter-spacing: 10%;
+  display: block;
+}
+@media screen and (min-width: 320px) {
+  .header {
+    font-size: 300%;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .header {
+    font-size: 400%;
+  }
+}
