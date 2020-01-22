@@ -6,6 +6,19 @@ import instagram from "./../../images/instagram.png";
 import "./../../styles/shared/header_and_navbar.scss";
 
 class Header extends Component {
+  state = { menuClosed: true };
+
+  onHamburgerClick = () => {
+    this.setState(state => {
+      return { menuClosed: !state.menuClosed };
+    });
+  };
+
+  getHamClassName = () => {
+    if (this.state.menuClosed === false) {
+      return "is-active";
+    }
+  };
   render() {
     return (
       <>
@@ -17,15 +30,16 @@ class Header extends Component {
           </div>
 
           <div className="pages">
+            <button
+              className={`hamburger hamburger--slider ${this.getHamClassName()}`}
+              onClick={this.onHamburgerClick}
+              type="button"
+            >
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
             <BrowserRouter>
-              <button
-                class="hamburger hamburger--slider is-active"
-                type="button"
-              >
-                <span class="hamburger-box">
-                  <span class="hamburger-inner"></span>
-                </span>
-              </button>
               <Link to="/" className="nav-link">
                 Home
               </Link>
