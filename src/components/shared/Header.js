@@ -19,6 +19,18 @@ class Header extends Component {
       return "is-active";
     }
   };
+  showMobileNav = () => {
+    function setScreenSize() {
+      console.log("resized to: ", window.innerWidth, "x", window.innerHeight);
+    }
+
+    window.addEventListener("resize", setScreenSize);
+    if (this.state.menuClosed === true && window.innerWidth < 550) {
+      return "none";
+    } else {
+      return "block";
+    }
+  };
   render() {
     return (
       <>
@@ -29,16 +41,17 @@ class Header extends Component {
             <img src={instagram} alt="instagram" className="icon" />
           </div>
 
-          <div className="pages">
-            <button
-              className={`hamburger hamburger--slider ${this.getHamClassName()}`}
-              onClick={this.onHamburgerClick}
-              type="button"
-            >
-              <span class="hamburger-box">
-                <span class="hamburger-inner"></span>
-              </span>
-            </button>
+          <button
+            className={`hamburger hamburger--slider ${this.getHamClassName()}`}
+            onClick={this.onHamburgerClick}
+            type="button"
+          >
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+
+          <div className="pages" style={{ display: `${this.showMobileNav()}` }}>
             <BrowserRouter>
               <Link to="/" className="nav-link">
                 Home
