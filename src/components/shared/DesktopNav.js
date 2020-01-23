@@ -12,9 +12,24 @@ class DesktopNav extends Component {
 
         <div className="navbar">
           <div className="social-icons">
-            <img src={twitter} alt="twitter" className="icon" />
-            <img src={instagram} alt="instagram" className="icon" />
+            {/* TWITTER */}
+            <a
+              href="https://twitter.com/BronteRhian_"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={twitter} alt="twitter" className="icon" />
+            </a>
+            {/* INSTAGRAM */}
+            <a
+              href="https://www.instagram.com/redshirtwalking/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={instagram} alt="instagram" className="icon" />
+            </a>
           </div>
+          {/* PAGE LINKS */}
           <div className="link-container">
             <BrowserRouter>
               <Link to="/" className="nav-link">
