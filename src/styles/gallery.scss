@@ -2,7 +2,7 @@
 
 .flex-container {
   margin: auto;
-  display: column;
+  display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
@@ -10,8 +10,8 @@
   text-align: center;
 
   .genre-box {
-    width: 100px;
-    height: 100px;
+    width: 80%;
+    height: 200px;
     background-image: url(https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
     background-size: cover;
     background-repeat: no-repeat;

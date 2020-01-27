@@ -4,13 +4,8 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ash1 from "./../../images/ash1.jpeg";
 import ash2 from "./../../images/ash2.jpeg";
-import ash3 from "./../../images/ash3.jpeg";
-import ash4 from "./../../images/ash4.jpeg";
-import ash5 from "./../../images/ash5.jpeg";
-import ash6 from "./../../images/ash6.jpeg";
 import em1 from "./../../images/em1.jpeg";
 import em2 from "./../../images/em2.jpeg";
-import em3 from "./../../images/em3.jpeg";
 
 class Home extends Component {
   render() {
@@ -34,36 +29,48 @@ class Home extends Component {
     };
     return (
       <Carousel
-        // swipeable={false}
-        // draggable={false}
-        // showDots={true}
+        swipeable={true}
+        draggable={false}
+        showDots={true}
         responsive={responsive}
-        // ssr={true} // means to render carousel on server-side.
-        // infinite={true}
-        // autoPlay={this.props.deviceType !== "mobile" ? true : false}
-        // autoPlaySpeed={2000}
-        // keyBoardControl={true}
-        // customTransition="all .5"
-        // transitionDuration={500}
-        // containerClass="carousel-container"
-        // removeArrowOnDeviceType={["tablet", "mobile"]}
-        // deviceType={this.props.deviceType}
-        // dotListClass="custom-dot-list-style"
-        // itemClass="carousel-item-padding-20-px"
+        ssr={true} // means to render carousel on server-side.
+        infinite={true}
+        autoPlay={this.props.deviceType !== "mobile" ? true : false}
+        autoPlaySpeed={2000}
+        keyBoardControl={true}
+        customTransition="all .5"
+        transitionDuration={1000}
+        containerClass="carousel-container"
+        removeArrowOnDeviceType={["tablet", "mobile"]}
+        deviceType={this.props.deviceType}
+        dotListClass="custom-dot-list-style"
+        itemClass="carousel-item-padding-20-px"
       >
         {/* CAROUSEL IMAGES */}
-        <div className="img-div">
-          <img src={ash1} alt="portrait" className="img-container" />
-        </div>
-        <div className="img-div">
-          <img src={ash1} alt="portrait" className="img-container" />
-        </div>
-        <div className="img-div">
-          <img src={ash1} alt="portrait" className="img-container" />
-        </div>
-        <div className="img-div">
-          <img src={ash1} alt="portrait" className="img-container" />
-        </div>
+        <div
+          className="img-div1"
+          style={{
+            backgroundImage: `url(${ash1})`
+          }}
+        ></div>
+        <div
+          className="img-div2"
+          style={{
+            backgroundImage: `url(${ash2})`
+          }}
+        ></div>
+        <div
+          className="img-div3"
+          style={{
+            backgroundImage: `url(${em1})`
+          }}
+        ></div>
+        <div
+          className="img-div4"
+          style={{
+            backgroundImage: `url(${em2})`
+          }}
+        ></div>
       </Carousel>
     );
   }

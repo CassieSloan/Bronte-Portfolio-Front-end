@@ -1,8 +1,11 @@
-.img-div {
-  width: 200px;
-  .img-container {
-    height: 200px;
-    height: 200px;
-    padding: 0;
-  }
+@import "./shared/variables";
+
+.img-div1,
+.img-div2,
+.img-div3,
+.img-div4 {
+  height: $carousel-image-height;
+  background-size: $backgroundsize;
+  background-position: $backgroundposition;
+  background-repeat: $backgroundrepeat;
 }
