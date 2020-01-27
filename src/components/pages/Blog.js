@@ -20,14 +20,18 @@ class Blog extends Component {
     return (
       <>
         <div className="blog-post-container">
-          <div className="image-container">{/* insert image url here */}</div>
           <div className="text-container">
             {posts.map(post => {
               return (
                 <>
+                  <div className="image-container">
+                    {/* insert image url here */}
+                  </div>
+
                   <h3>{post.title}</h3>
                   <p>{post.body}</p>
                   <button>See more</button>
+                  {/* click for full page view with post.body */}
                 </>
               );
             })}

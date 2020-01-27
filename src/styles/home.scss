@@ -1,0 +1,11 @@
+@import "./shared/variables";
+
+.img-div1,
+.img-div2,
+.img-div3,
+.img-div4 {
+  height: $carousel-image-height;
+  background-size: $backgroundsize;
+  background-position: $backgroundposition;
+  background-repeat: $backgroundrepeat;
+}
