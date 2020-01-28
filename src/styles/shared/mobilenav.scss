@@ -1,6 +1,9 @@
 @import "./variables"; //global variables
 @import "./../../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss"; //hamburger scss library
 
+.header {
+  display: none;
+}
 .pages {
   display: block;
   height: 100vh;
