@@ -6,6 +6,7 @@ import ash1 from "./../../images/ash1.jpeg";
 import ash2 from "./../../images/ash2.jpeg";
 import em1 from "./../../images/em1.jpeg";
 import em2 from "./../../images/em2.jpeg";
+import ash3 from "./../../images/ash3.jpeg";
 
 class Home extends Component {
   render() {
@@ -27,6 +28,7 @@ class Home extends Component {
         items: 1
       }
     };
+
     return (
       <Carousel
         swipeable={true}
@@ -45,6 +47,8 @@ class Home extends Component {
         deviceType={this.props.deviceType}
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-20-px"
+        renderButtonGroupOutside={true}
+        renderDotsOutside={true}
       >
         {/* CAROUSEL IMAGES */}
         <div
@@ -69,6 +73,12 @@ class Home extends Component {
           className="img-div4"
           style={{
             backgroundImage: `url(${em2})`
+          }}
+        ></div>
+        <div
+          className="img-div5"
+          style={{
+            backgroundImage: `url(${ash3})`
           }}
         ></div>
       </Carousel>

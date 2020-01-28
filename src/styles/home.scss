@@ -3,9 +3,13 @@
 .img-div1,
 .img-div2,
 .img-div3,
-.img-div4 {
+.img-div4,
+.img-div5 {
   height: $carousel-image-height;
   background-size: $backgroundsize;
   background-position: $backgroundposition;
   background-repeat: $backgroundrepeat;
+}
+.carousel-container {
+  margin-top: 50px;
 }
