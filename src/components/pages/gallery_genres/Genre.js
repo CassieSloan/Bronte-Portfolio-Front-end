@@ -16,18 +16,18 @@ import em3 from "../../../images/em3.jpeg";
 //have state equal an array with corresponding image urls/amazon images
 //map through state to display images
 //e.g
-//if endpoint = /portrait
+//if endpoint matches category e.g = portrait
 // fill state with images categorised/tagged as portrait
 
 class Genre extends Component {
   state = {
-    //hardcoding for testing purposes
+    //hardcoding for test purposes
     images: [ash1, ash2, ash3, ash4, ash5, ash6, em1, em2, em3]
   };
 
   //function imageState
   // let path = this.props.location.pathname
-  //if (path === image.category(e.g "portrait")) {
+  //if (path === `/gallery${image.category}`(e.g "portrait")) {
   //setState = {images: [array of portrait tagged images]}
   //}
 
