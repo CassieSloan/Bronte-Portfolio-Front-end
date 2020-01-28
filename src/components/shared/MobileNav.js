@@ -25,6 +25,7 @@ class MobileNav extends Component {
       return "block";
     }
   };
+  // IF MENU IS OPEN, GET RID OF TITLE
 
   removeHeaderOnClick = () => {
     if (this.state.menuClosed === false) {
@@ -35,7 +36,6 @@ class MobileNav extends Component {
   };
 
   render() {
-    // IF MENU IS open, GET RID OF TITLE
     return (
       <>
         <Title
