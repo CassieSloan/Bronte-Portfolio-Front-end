@@ -17,10 +17,13 @@ class Aboutme extends Component {
               oat cake. Jujubes brownie candy pudding jelly beans ice cream.
               Brownie bear claw sweet brownie sugar plum jelly beans lemon drops
               candy canes. Cupcake cotton candy candy canes fruitcake cheesecake
-              jelly-o. Liquorice wafer icing cake gingerbread tiramisu. Brownie
-              icing cake chupa chups sesame snaps candy canes sesame snaps
-              liquorice caramels. Bonbon tiramisu jelly marshmallow macaroon
-              icing cheesecake. Jelly fruitcake jelly-o powder pudding.
+              jelly-o.
+            </p>
+            <p>
+              Liquorice wafer icing cake gingerbread tiramisu. Brownie icing
+              cake chupa chups sesame snaps candy canes sesame snaps liquorice
+              caramels. Bonbon tiramisu jelly marshmallow macaroon icing
+              cheesecake. Jelly fruitcake jelly-o powder pudding.
             </p>
           </div>
         </div>

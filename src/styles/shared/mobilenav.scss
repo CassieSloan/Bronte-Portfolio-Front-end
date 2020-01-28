@@ -1,6 +1,9 @@
 @import "./variables"; //global variables
 @import "./../../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss"; //hamburger scss library
 
+.header {
+  display: none;
+}
 .pages {
   display: block;
   height: 100vh;
@@ -11,7 +14,7 @@
     display: block;
     font-family: $heading-font;
     font-size: 200%;
-    padding: 8%;
+    padding: 1em;
     text-decoration: none;
     font-weight: 700;
     text-align: center;

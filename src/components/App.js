@@ -5,7 +5,7 @@ import Gallery from "./pages/Gallery"; //gallery
 import Contact from "./pages/Contact"; //contact
 import Blog from "./pages/Blog"; //blog
 import Aboutme from "./pages/About_me"; //about me
-import Portrait from "./pages/gallery_genres/Portrait";
+import Genre from "./pages/gallery_genres/Genre";
 import Footer from "./shared/Footer";
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
@@ -15,6 +15,7 @@ class App extends Component {
     return (
       <>
         <Header />
+        {/* R O U T I N G */}
         <BrowserRouter>
           <Switch>
             <Route exact path="/">
@@ -26,7 +27,7 @@ class App extends Component {
             </Route>
 
             <Route exact path="/gallery/portrait">
-              <Portrait />
+              <Genre />
             </Route>
 
             <Route exact path="/contact">

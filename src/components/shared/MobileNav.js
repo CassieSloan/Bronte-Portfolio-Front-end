@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter, Link } from "react-router-dom";
 import "./../../styles/shared/mobilenav.scss";
+import Title from "./Title";
 
 class MobileNav extends Component {
   state = { menuClosed: true };
@@ -24,9 +25,23 @@ class MobileNav extends Component {
       return "block";
     }
   };
+  // IF MENU IS OPEN, GET RID OF TITLE
+
+  removeHeaderOnClick = () => {
+    if (this.state.menuClosed === false) {
+      return "none";
+    } else {
+      return "block";
+    }
+  };
+
   render() {
     return (
       <>
+        <Title
+          className="header"
+          style={{ display: `${this.removeHeaderOnClick()}` }}
+        />
         {/* H A M B U R G E R */}
 
         <button

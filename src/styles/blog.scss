@@ -21,6 +21,10 @@
   }
   .text-container {
     width: 80%;
+    p {
+      font-family: $menu-font;
+      color: $p-font-color;
+    }
   }
 }
 
