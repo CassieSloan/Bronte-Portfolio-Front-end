@@ -12,56 +12,56 @@ class Gallery extends Component {
       <>
         <section className="flex-container">
           <BrowserRouter>
+            {/* PORTRAIT BOX */}
             <div className="genre-box">
-              <div
-                className="image1"
-                style={{
-                  backgroundImage: `url(${ash4})`
-                }}
-              >
-                <Link to="/gallery/portrait" className="box-text">
-                  Portrait
-                </Link>
-              </div>
+              <Link to="/gallery/portrait" className="nav-link">
+                {/* Portrait */}
+                <div
+                  className="image1"
+                  style={{
+                    backgroundImage: `url(${ash4})`
+                  }}
+                ></div>
+              </Link>
             </div>
-
+            {/* LANDSCAPE BOX */}
             <div className="genre-box">
-              <div
-                className="image2"
-                style={{
-                  backgroundImage: `url(${em3})`
-                }}
-              >
-                <Link to="/gallery/landscape" className="box-text">
-                  Landscape
-                </Link>
-              </div>
+              <Link to="/gallery/landscape" className="box-text">
+                {/* Landscape */}
+                <div
+                  className="image2"
+                  style={{
+                    backgroundImage: `url(${em3})`
+                  }}
+                ></div>
+              </Link>
             </div>
-
+            {/* BLACK AND WHITE BOX */}
             <div className="genre-box">
-              <div
-                className="image3"
-                style={{
-                  backgroundImage: `url(${ash5})`
-                }}
-              >
-                <Link to="/gallery/black-and-white" className="box-text">
-                  Black and White
-                </Link>
-              </div>
+              <Link to="/gallery/black-and-white" className="box-text">
+                {/* Black and White */}
+
+                <div
+                  className="image3"
+                  style={{
+                    backgroundImage: `url(${ash5})`
+                  }}
+                ></div>
+              </Link>
             </div>
-
+            {/* EDITORIAL BOX */}
             <div className="genre-box">
-              <div
-                className="image4"
-                style={{
-                  backgroundImage: `url(${ash6})`
-                }}
-              >
-                <Link to="/gallery/editorial" className="box-text">
-                  Editorial
-                </Link>
-              </div>
+              <Link to="/gallery/editorial" className="box-text">
+                {/* Editorial */}
+                <div
+                  className="image4"
+                  style={{
+                    backgroundImage: `url(${ash6})`
+                  }}
+                >
+                  {" "}
+                </div>
+              </Link>
             </div>
           </BrowserRouter>
         </section>
