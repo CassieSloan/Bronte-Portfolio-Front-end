@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter, Link } from "react-router-dom";
 import "./../../styles/shared/mobilenav.scss";
+import Title from "./Title";
 
 class MobileNav extends Component {
   state = { menuClosed: true };
@@ -25,40 +26,75 @@ class MobileNav extends Component {
     }
   };
   render() {
-    return (
-      <>
-        {/* H A M B U R G E R */}
-
-        <button
-          className={`hamburger hamburger--slider ${this.getHamClassName()}`}
-          onClick={this.onHamburgerClick}
-          type="button"
-        >
-          <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-          </span>
-        </button>
-        <div className="pages" style={{ display: `${this.showMobileNav()}` }}>
-          <BrowserRouter>
-            <Link to="/" className="nav-link">
-              Home
-            </Link>
-            <Link to="/gallery" className="nav-link">
-              Gallery
-            </Link>
-            <Link to="/about" className="nav-link">
-              About
-            </Link>
-            <Link to="/contact" className="nav-link">
-              Contact
-            </Link>
-            <Link to="/blog" className="nav-link">
-              Blog
-            </Link>
-          </BrowserRouter>
+    if (this.state.menuClosed === false) {
+      return (
+        <div>
+          <button
+            className={`hamburger hamburger--slider ${this.getHamClassName()}`}
+            onClick={this.onHamburgerClick}
+            type="button"
+          >
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+          <div className="pages" style={{ display: `${this.showMobileNav()}` }}>
+            <BrowserRouter>
+              <Link to="/" className="nav-link">
+                Home
+              </Link>
+              <Link to="/gallery" className="nav-link">
+                Gallery
+              </Link>
+              <Link to="/about" className="nav-link">
+                About
+              </Link>
+              <Link to="/contact" className="nav-link">
+                Contact
+              </Link>
+              <Link to="/blog" className="nav-link">
+                Blog
+              </Link>
+            </BrowserRouter>
+          </div>
         </div>
-      </>
-    );
+      );
+    } else
+      return (
+        <>
+          <Title />
+          {/* H A M B U R G E R */}
+
+          <button
+            className={`hamburger hamburger--slider ${this.getHamClassName()}`}
+            onClick={this.onHamburgerClick}
+            type="button"
+          >
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+          <div className="pages" style={{ display: `${this.showMobileNav()}` }}>
+            <BrowserRouter>
+              <Link to="/" className="nav-link">
+                Home
+              </Link>
+              <Link to="/gallery" className="nav-link">
+                Gallery
+              </Link>
+              <Link to="/about" className="nav-link">
+                About
+              </Link>
+              <Link to="/contact" className="nav-link">
+                Contact
+              </Link>
+              <Link to="/blog" className="nav-link">
+                Blog
+              </Link>
+            </BrowserRouter>
+          </div>
+        </>
+      );
   }
 }
 
