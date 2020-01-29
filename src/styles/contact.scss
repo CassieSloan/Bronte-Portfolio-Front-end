@@ -1,35 +1,43 @@
 @import "./shared/variables";
 
-
 .flexbox {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    padding: 10%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 10%;
 
-    .info {
-        width: 40%;
-        p {
-            width: 100%;
-        }
-    }
-
-    .form {
-        width: 40%;
-        input {
-            width: 100%;
-            border: 3px rgb(197, 197, 197) solid;
-            border-radius: 0.4em;
-            margin: 5% 0% 5% 0%;
-            height: 7%;
-        }
-        textarea {
-            width: 100%;
-            height: 50%;
-            margin: 5% 0% 5% 0%;
-        }
-    }
+  .info {
+    // width: 40%;
     p {
-        color: $p-font-color;
+      width: 100%;
+      color: $p-font-color;
+      font-family: $menu-font;
+      text-align: center;
     }
+  }
+
+  .form {
+    // width: 40%;
+    text-align: center;
+    margin: auto;
+    input {
+      width: 100%;
+      border: 3px rgb(197, 197, 197) solid;
+      border-radius: 0.4em;
+      margin: 5% 0% 5% 0%;
+      height: 2em;
+      color: rgb(200, 143, 152);
+    }
+    textarea {
+      width: 100%;
+      height: 50%;
+      margin: 5% 0% 5% 0%;
+      border: 3px rgb(197, 197, 197) solid;
+      border-radius: 0.4em;
+      color: rgb(200, 143, 152);
+    }
+  }
+}
+
+@media screen and (min-width: 500px) {
 }
