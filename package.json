@@ -40,6 +40,7 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "devDependencies": {
+    "cypress": "^3.8.3",
     "eslint-config-prettier": "^6.9.0",
     "eslint-plugin-prettier": "^3.1.2"
   },
