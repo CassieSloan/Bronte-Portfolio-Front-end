@@ -24,7 +24,6 @@ class Header extends Component {
     if (this.state.screenSize < 550) {
       return (
         <>
-          <Title />
           <MobileNav />
         </>
       );

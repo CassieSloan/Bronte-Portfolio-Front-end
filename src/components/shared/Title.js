@@ -7,7 +7,9 @@ class Title extends Component {
       <>
         {/* H E A D I N G */}
 
-        <h1 className="header">BRONTE DAVIS</h1>
+        <h1 className="header" style={this.props.style}>
+          BRONTE DAVIS
+        </h1>
       </>
     );
   }

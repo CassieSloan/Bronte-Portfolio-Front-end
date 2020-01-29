@@ -15,6 +15,7 @@ class App extends Component {
     return (
       <>
         <Header />
+        {/* R O U T I N G */}
         <BrowserRouter>
           <Switch>
             <Route exact path="/">

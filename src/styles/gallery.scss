@@ -8,7 +8,6 @@
   justify-content: center;
   flex-wrap: wrap;
   overflow: hidden;
-  text-align: center;
 
   .genre-box {
     width: 200px;
@@ -41,6 +40,8 @@
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     margin-top: 10%;
+    // position: relative;
+    // z-index: -1;
   }
 }
 
@@ -48,5 +49,6 @@
 @media screen and (min-width: 550px) {
   .flex-container {
     flex-direction: row;
+    flex-wrap: nowrap;
   }
 }

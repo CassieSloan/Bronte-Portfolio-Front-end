@@ -12,56 +12,60 @@ class Gallery extends Component {
       <>
         <section className="flex-container">
           <BrowserRouter>
-            {/* PORTRAIT BOX */}
-            <div className="genre-box">
-              <Link to="/gallery/portrait" className="nav-link">
-                {/* Portrait */}
-                <div
-                  className="image1"
-                  style={{
-                    backgroundImage: `url(${ash4})`
-                  }}
-                ></div>
-              </Link>
+            {/* P O R T R A I T   B O X  */}
+            <div className="top-div">
+              <div className="genre-box">
+                <Link to="/gallery/portrait" className="box-text">
+                  {/* Portrait */}
+                  <div
+                    className="image1"
+                    style={{
+                      backgroundImage: `url(${ash4})`
+                    }}
+                  ></div>
+                </Link>
+              </div>
+              {/* L A N D S C A P E   B O X  */}
+              <div className="genre-box">
+                <Link to="/gallery/landscape" className="box-text">
+                  {/* Landscape */}
+                  <div
+                    className="image2"
+                    style={{
+                      backgroundImage: `url(${em3})`
+                    }}
+                  ></div>
+                </Link>
+              </div>
             </div>
-            {/* LANDSCAPE BOX */}
-            <div className="genre-box">
-              <Link to="/gallery/landscape" className="box-text">
-                {/* Landscape */}
-                <div
-                  className="image2"
-                  style={{
-                    backgroundImage: `url(${em3})`
-                  }}
-                ></div>
-              </Link>
-            </div>
-            {/* BLACK AND WHITE BOX */}
-            <div className="genre-box">
-              <Link to="/gallery/black-and-white" className="box-text">
-                {/* Black and White */}
+            {/* B L A C K   A N D   W H I T E   B O X  */}
 
-                <div
-                  className="image3"
-                  style={{
-                    backgroundImage: `url(${ash5})`
-                  }}
-                ></div>
-              </Link>
-            </div>
-            {/* EDITORIAL BOX */}
-            <div className="genre-box">
-              <Link to="/gallery/editorial" className="box-text">
-                {/* Editorial */}
-                <div
-                  className="image4"
-                  style={{
-                    backgroundImage: `url(${ash6})`
-                  }}
-                >
-                  {" "}
-                </div>
-              </Link>
+            <div className="bottom-div">
+              <div className="genre-box">
+                <Link to="/gallery/black-and-white" className="box-text">
+                  {/* Black and White */}
+                  <div
+                    className="image3"
+                    style={{
+                      backgroundImage: `url(${ash5})`
+                    }}
+                  ></div>
+                </Link>
+              </div>
+              {/* E D I T O R I A L   B O X  */}
+              <div className="genre-box">
+                <Link to="/gallery/editorial" className="box-text">
+                  {/* Editorial */}
+                  <div
+                    className="image4"
+                    style={{
+                      backgroundImage: `url(${ash6})`
+                    }}
+                  >
+                    {" "}
+                  </div>
+                </Link>
+              </div>
             </div>
           </BrowserRouter>
         </section>
