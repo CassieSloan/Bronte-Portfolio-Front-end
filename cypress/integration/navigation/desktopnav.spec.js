@@ -1,4 +1,3 @@
-// nav buttons lead to appropriate pages/endpoints
 // P A S S E D
 describe("testing that desktop nav links work for routing", () => {
   it("testing that desktop nav links work for routing", () => {
@@ -9,7 +8,6 @@ describe("testing that desktop nav links work for routing", () => {
   });
 });
 
-//social buttons link to socials
 // P A S S E D
 describe("social links in nav bar link out to socials", () => {
   it("twitter button links to bronte's twitter", () => {

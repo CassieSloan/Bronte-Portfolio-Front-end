@@ -1,4 +1,5 @@
 //loads all pages
+//P A S S E D
 describe("test that all endpoints load successfully", () => {
   it("visit the homepage", () => {
     cy.visit("http://localhost:3000");
