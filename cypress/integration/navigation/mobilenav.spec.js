@@ -1,5 +1,5 @@
 //P A S S E D
-describe("homepage elements displaying correctly", () => {
+describe("MOBILE NAV elements displaying correctly", () => {
   it("visit the homepage", () => {
     cy.visit("http://localhost:3000");
   });
