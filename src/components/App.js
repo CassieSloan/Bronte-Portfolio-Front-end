@@ -14,9 +14,10 @@ class App extends Component {
   render() {
     return (
       <>
-        <Header />
         {/* R O U T I N G */}
         <BrowserRouter>
+          <Header />
+
           <Switch>
             <Route exact path="/">
               <Home />
@@ -42,8 +43,8 @@ class App extends Component {
               <Aboutme />
             </Route>
           </Switch>
+          <Footer />
         </BrowserRouter>
-        <Footer />
       </>
     );
   }

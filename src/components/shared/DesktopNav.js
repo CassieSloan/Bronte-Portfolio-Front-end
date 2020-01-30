@@ -31,23 +31,21 @@ class DesktopNav extends Component {
           </div>
           {/* PAGE LINKS */}
           <div className="link-container">
-            <BrowserRouter>
-              <Link to="/" className="nav-link">
-                Home
-              </Link>
-              <Link to="/gallery" className="nav-link">
-                Gallery
-              </Link>
-              <Link to="/about" className="nav-link">
-                About
-              </Link>
-              <Link to="/contact" className="nav-link">
-                Contact
-              </Link>
-              <Link to="/blog" className="nav-link">
-                Blog
-              </Link>
-            </BrowserRouter>
+            <Link to="/" className="nav-link">
+              Home
+            </Link>
+            <Link to="/gallery" className="nav-link">
+              Gallery
+            </Link>
+            <Link to="/about" className="nav-link">
+              About
+            </Link>
+            <Link to="/contact" className="nav-link">
+              Contact
+            </Link>
+            <Link to="/blog" className="nav-link">
+              Blog
+            </Link>
           </div>
         </div>
       </>
