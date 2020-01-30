@@ -23,7 +23,7 @@ describe("homepage elements displaying correctly", () => {
   });
 
   //mobile nav drops down links on click
-  // U N T E S T E D
+  // P A S S E D
   it("mobile nav drops down links on click", () => {
     cy.viewport(549, 600).then(() => {
       cy.get(".hamburger")
