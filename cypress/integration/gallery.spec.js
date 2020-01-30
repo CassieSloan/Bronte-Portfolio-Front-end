@@ -1,0 +1,1 @@
+//GALLERY page tests
