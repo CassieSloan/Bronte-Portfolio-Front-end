@@ -8,7 +8,9 @@ class Blog extends Component {
   };
 
   async componentDidMount() {
-    const response = await axios.get("http://localhost:3001/posts/");
+    const response = await axios.get(
+      `${process.env.REACT_APP_SERVER_URL}/posts`
+    );
     let posts = response.data;
     console.log(posts);
 
@@ -21,11 +23,11 @@ class Blog extends Component {
       <>
         <div className="blog-post-container">
           <div className="text-container">
-            {posts.map(post => {
+            {posts.reverse().map(post => {
               return (
                 <>
                   <div className="image-container">
-                    {/* insert image url here */}
+                    <img src={post.imageUrl} alt={post.imageName} />
                   </div>
 
                   <h3>{post.title}</h3>
