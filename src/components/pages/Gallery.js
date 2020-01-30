@@ -30,12 +30,8 @@ class Gallery extends Component {
           {images.reverse().map(image => {
             return (
               <>
-                <div className="image-container">
-                  <img
-                    key={images}
-                    src={image.imageUrl}
-                    alt={image.imageName}
-                  />
+                <div className="image-container" key={image.url}>
+                  <img src={image.url} alt={image.name} />
                 </div>
                 {/* click for full page view with post.body */}
               </>
