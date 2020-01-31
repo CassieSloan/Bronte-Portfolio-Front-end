@@ -1,7 +1,7 @@
 @import "./shared/variables";
 @import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
 
-.flexbox {
+.contact-flexbox {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -13,6 +13,19 @@
       color: $p-font-color;
       font-family: $menu-font;
       text-align: center;
+    }
+    .image-container {
+      overflow: hidden;
+      width: 100%;
+      margin-left: 0;
+      img {
+        height: 100%;
+        width: 100%;
+        transition: all 1s ease-in;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
     }
   }
 
@@ -35,18 +48,29 @@
       border-radius: 0.4em;
       color: rgb(200, 143, 152);
     }
+    .submit-button {
+      width: 100px;
+      border: none;
+      color: white;
+      background-color: #ffdbdd;
+      &:hover {
+        background-color: rgb(200, 143, 152);
+        cursor: pointer;
+      }
+    }
   }
 }
 
 @media screen and (min-width: 600px) {
-  .flexbox {
+  .contact-flexbox {
     flex-direction: row;
+    justify-content: space-around;
     .info {
       width: 40%;
     }
     .form {
       width: 40%;
-      margin: none;
+      margin: 0;
     }
   }
 }
