@@ -1,8 +1,40 @@
 import React, { Component } from "react";
 import "./../../styles/contact.scss";
+import sgMail from "@sendgrid/mail";
+import axios from "axios";
+import TextField from "@material-ui/core/TextField";
 
 class Contact extends Component {
+  state = {
+    name: "",
+    from: "",
+    number: "",
+    text: ""
+  };
+
+  onInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({ [name]: value });
+  };
+
+  onFormSubmit = async event => {
+    event.preventDefault();
+    const { name, from, number, text } = this.state;
+
+    try {
+      await axios.post(`${process.env.REACT_APP_SERVER_URL}/email`, {
+        name,
+        from,
+        number,
+        text
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   render() {
+    const { name, from, number, text } = this.state;
     return (
       <>
         <div className="flexbox">
@@ -21,12 +53,55 @@ class Contact extends Component {
             </p>
           </div>
           {/* CONNECT SENDGRID HERE */}
-          <div className="form">
-            <input type="text" value="Name" />
-            <input type="text" value="Email" />
-            <textarea value="Your message"></textarea>
-            <input type="submit" value="send message" />
-          </div>
+
+          <form className="test">
+            <TextField
+              name="name"
+              value={name}
+              onChange={this.onInputChange}
+              id="outline-required"
+              label="Name"
+              variant="outlined"
+            />
+
+            <TextField
+              name="from"
+              value={from}
+              onChange={this.onInputChange}
+              id="standard-basic"
+              label="Email"
+            />
+
+            <TextField
+              name="number"
+              value={number}
+              onChange={this.onInputChange}
+              id="standard-basic"
+              label="Phone Number"
+            />
+
+            <TextField
+              id="outlined-multiline-flexible"
+              name="text"
+              label="Business Enquiry"
+              multiline
+              rowsMax="4"
+              value={text}
+              onChange={this.onInputChange}
+              variant="outlined"
+              margin="normal"
+              fullWidth
+              InputLabelProps={{
+                shrink: true
+              }}
+            />
+
+            <input
+              type="submit"
+              value="send message"
+              onSubmit={event => this.onFormSubmit(event)}
+            />
+          </form>
         </div>
       </>
     );
