@@ -1,7 +1,38 @@
 import React, { Component } from "react";
 import "./../../styles/contact.scss";
+import axios from "axios";
 
 class Contact extends Component {
+  // // axios({
+  // //   method:  post,
+  // //   url: "localhost:3001/email",
+  // //   data: {
+  // //     to: "cassandra.sloan16@gmail.com",
+  // //     from: "cassandra.sloan16@gmail.com",
+  // //     subject: "tetsy test test",
+  // //     text: "boop boop boop"
+  // //   }
+  // // });
+
+  // state = {
+  //   to: "bronterhian@gmail.com",
+  //   from: "",
+  //   subject: "Message from portfolio",
+  //   text: ""
+  // };
+
+  // changeValue = event => {
+  //   this.setState({
+  //     [event.target.name]: event.target.value
+  //   });
+  // };
+
+  // formFromInput = () => {
+  //   this.setState(state => {
+  //     return { from: this.event.target.value };
+  //   });
+  // };
+
   render() {
     return (
       <>
@@ -23,16 +54,16 @@ class Contact extends Component {
             </p>
           </div>
           {/* CONNECT SENDGRID HERE */}
-          <div className="form">
-            <input type="text" value="Name" />
-            <input type="text" value="Email" />
-            <textarea value="Your message"></textarea>
+          <form className="form">
+            <input type="text" value="name" />
+            <input type="text" value="email" />
+            <textarea value="your message"></textarea>
             <input
               type="submit"
               value="send message"
               className="submit-button"
             />
-          </div>
+          </form>
         </div>
       </>
     );
