@@ -7,7 +7,6 @@
   padding: 10%;
 
   .info {
-    // width: 40%;
     p {
       width: 100%;
       color: $p-font-color;
@@ -17,7 +16,6 @@
   }
 
   .form {
-    // width: 40%;
     text-align: center;
     margin: auto;
     input {
@@ -39,5 +37,15 @@
   }
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 600px) {
+  .flexbox {
+    flex-direction: row;
+    .info {
+      width: 40%;
+    }
+    .form {
+      width: 40%;
+      margin: none;
+    }
+  }
 }
