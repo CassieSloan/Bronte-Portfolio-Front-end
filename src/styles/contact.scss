@@ -9,10 +9,10 @@
   .info {
     // width: 40%;
     .image-container {
-      // width: 100%;
-      width: 50%;
+      width: 70%;
       overflow: hidden;
       margin: auto;
+      border-radius: 32% 68% 25% 75% / 72% 18% 82% 28%;
 
       img {
         width: 100%;
@@ -33,14 +33,11 @@
   }
 
   .form {
-    // width: 40%;
-    text-align: center;
     margin: auto;
     .input {
       width: 100%;
       border-radius: 0.4em;
       margin: 5% 0% 5% 0%;
-      height: 2em;
       color: rgb(200, 143, 152);
     }
     .textarea {
@@ -56,6 +53,8 @@
     border-radius: 0.5em;
     height: 3em;
     color: white;
+    margin-top: 5%;
+    font-size: 1em;
     &:hover {
       background-color: rgb(200, 143, 152);
       cursor: pointer;
@@ -63,5 +62,18 @@
   }
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 700px) {
+  .flexbox {
+    flex-direction: row;
+    justify-content: center;
+    .info {
+      width: 45%;
+      .image-container {
+        width: 100%;
+      }
+    }
+    .form {
+      width: 45%;
+    }
+  }
 }

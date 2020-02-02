@@ -37,6 +37,7 @@ class Contact extends Component {
     return (
       <>
         <div className="flexbox">
+          {/* image and text */}
           <div className="info">
             <div className="image-container">
               <img
@@ -53,7 +54,8 @@ class Contact extends Component {
               jelly-o.
             </p>
           </div>
-          {/* CONNECT SENDGRID HERE */}
+
+          {/* form fill out */}
 
           <form className="form">
             <TextField
@@ -61,7 +63,7 @@ class Contact extends Component {
               name="name"
               value={name}
               onChange={this.onInputChange}
-              id="outline-required"
+              id="outlined-multiline-flexible"
               label="Name"
               variant="outlined"
             />
@@ -71,7 +73,7 @@ class Contact extends Component {
               name="from"
               value={from}
               onChange={this.onInputChange}
-              id="standard-basic"
+              id="outlined-multiline-flexible"
               label="Email"
               variant="outlined"
             />
@@ -81,7 +83,7 @@ class Contact extends Component {
               name="number"
               value={number}
               onChange={this.onInputChange}
-              id="standard-basic"
+              id="outlined-multiline-flexible"
               label="Phone Number"
               variant="outlined"
             />
@@ -102,7 +104,7 @@ class Contact extends Component {
                 shrink: true
               }}
             />
-
+            {/* submit button */}
             <input
               className="submit-button"
               type="submit"
