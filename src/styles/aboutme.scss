@@ -2,20 +2,18 @@
 
 .flex-box {
   margin: $screen-margin;
-  margin-top: 5%;
+  margin-top: 10%;
   display: flex;
   justify-content: center;
-  flex-direction: row;
-  overflow: hidden;
+  flex-direction: column;
 
   .image-container {
     overflow: hidden;
-    width: 500px;
+    width: 100%;
     border-radius: 32% 68% 25% 75% / 72% 18% 82% 28%;
+    margin: auto;
 
-    .image {
-      background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT0CqI8Xtux5jFCZApNESuolAhqV1Ba_OkXlAbZxlH1OvUBvHg9");
-      height: 100%;
+    img {
       width: 100%;
       background-size: $backgroundsize;
       background-repeat: $backgroundrepeat;
@@ -32,13 +30,22 @@
     margin-left: 10%;
     font-family: $menu-font;
     color: $p-font-color;
+    text-align: center;
   }
-}
-
-//tablet
-@media screen and (min-width: 320px) {
 }
 
 //desktop
 @media screen and (min-width: 550px) {
+  .flex-box {
+    flex-direction: row;
+    justify-content: space-around;
+
+    .image-container {
+      width: 50%;
+      margin-top: 0;
+    }
+    .text-container {
+      width: 40%;
+    }
+  }
 }

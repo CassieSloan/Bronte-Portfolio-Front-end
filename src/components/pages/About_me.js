@@ -7,7 +7,7 @@ class Aboutme extends Component {
       <>
         <div className="flex-box">
           <div className="image-container">
-            <div className="image"></div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT0CqI8Xtux5jFCZApNESuolAhqV1Ba_OkXlAbZxlH1OvUBvHg9"></img>
           </div>
 
           <div className="text-container">
