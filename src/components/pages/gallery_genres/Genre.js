@@ -11,7 +11,7 @@ import ash6 from "../../../images/ash6.jpeg";
 import em1 from "../../../images/em1.jpeg";
 import em2 from "../../../images/em2.jpeg";
 import em3 from "../../../images/em3.jpeg";
-
+import axios from "axios";
 //have state change depending on end point/category e.g portrait
 //have state equal an array with corresponding image urls/amazon images
 //map through state to display images
@@ -30,20 +30,35 @@ class Genre extends Component {
   //if (path === `/gallery${image.category}`(e.g "portrait")) {
   //setState = {images: [array of portrait tagged images]}
   //}
+  state = {
+    images: []
+  };
+
+  async componentDidMount() {
+    const response = await axios.get(
+      `${process.env.REACT_APP_SERVER_URL}/images`
+    );
+    let images = response.data;
+    console.log(images);
+
+    this.setState({ images });
+  }
 
   render() {
     const { images } = this.state;
+
     console.log(this.props.location.pathname); //finds current path
 
     return (
       <>
         <div className="flexbox">
-          {images.map(image => {
+          {images.reverse().map(image => {
             return (
               <>
-                <div className="image-container">
-                  <img key={images} src={image} alt="portrait" />
+                <div className="image-container" key={image.url}>
+                  <img src={image.url} alt={image.name} />
                 </div>
+                {/* click for full page view with post.body */}
               </>
             );
           })}

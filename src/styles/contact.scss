@@ -1,13 +1,28 @@
 @import "./shared/variables";
 
-.flexbox {
+.contact-flexbox {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: column;
   padding: 10%;
 
   .info {
-    // width: 40%;
+    .image-container {
+      width: 70%;
+      overflow: hidden;
+      margin: auto;
+      border-radius: 32% 68% 25% 75% / 72% 18% 82% 28%;
+
+      img {
+        width: 100%;
+        background-color: rgb(0, 0, 0);
+        transition: all 1s ease-in;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+
     p {
       width: 100%;
       color: $p-font-color;
@@ -17,27 +32,47 @@
   }
 
   .form {
-    // width: 40%;
     text-align: center;
-    margin: auto;
-    input {
+    .input {
       width: 100%;
-      border: 3px rgb(226, 226, 226) solid;
       border-radius: 0.4em;
       margin: 5% 0% 5% 0%;
-      height: 2em;
-      color: rgb(200, 143, 152);
+      color: $dark-pink;
     }
-    textarea {
+    .textarea {
       width: 100%;
-      height: 50%;
       margin: 5% 0% 5% 0%;
-      border: 3px rgb(226, 226, 226) solid;
       border-radius: 0.4em;
-      color: rgb(200, 143, 152);
+      color: $dark-pink;
+    }
+    .submit-button {
+      background-color: $light-pink;
+      border: none;
+      border-radius: 0.5em;
+      height: 3em;
+      color: rgb(255, 255, 255);
+      margin-top: 5%;
+      font-size: 1em;
+      &:hover {
+        background-color: $dark-pink;
+        cursor: pointer;
+      }
     }
   }
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 700px) {
+  .contact-flexbox {
+    flex-direction: row;
+    justify-content: space-between;
+    .info {
+      width: 45%;
+      .image-container {
+        width: 100%;
+      }
+    }
+    .form {
+      width: 45%;
+    }
+  }
 }

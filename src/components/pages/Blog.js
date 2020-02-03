@@ -32,7 +32,7 @@ class Blog extends Component {
 
                   <h3>{post.title}</h3>
                   <p>{post.body}</p>
-                  <button>See more</button>
+                  <button aria-label="see more">See more</button>
                   {/* click for full page view with post.body */}
                 </>
               );

@@ -1,16 +1,34 @@
 import React, { Component } from "react";
 import "./../../styles/aboutme.scss";
+import camera from "./../../images/icons/icons8-camera-50.png";
+import photoshop from "./../../images/icons/icons8-adobe-photoshop-50.png";
+import turtle from "./../../images/icons/icons8-turtle-50-3.png";
+import makeup from "./../../images/icons/icons8-face-powder-50.png";
 
 class Aboutme extends Component {
   render() {
     return (
       <>
         <div className="flex-box">
-          <div className="image-container">
-            <div className="image"></div>
-          </div>
+          <section className="images-block">
+            <div className="image-container">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT0CqI8Xtux5jFCZApNESuolAhqV1Ba_OkXlAbZxlH1OvUBvHg9"
+                alt="portrait of Bronte"
+              ></img>
+            </div>
+            <section className="icon-container">
+              <img src={camera} alt="camera icon"></img>
+              <img src={photoshop} alt="photoshop icon"></img>
+              <img src={turtle} alt="turtle icon"></img>
+              <img src={makeup} alt="makeup icon"></img>
+            </section>
+          </section>
 
           <div className="text-container">
+            <p>
+              Hi! I'm <span>Bronte Davis</span>
+            </p>
             <p>
               Gummi bears apple pie gummies carrot cake soufflé chocolate cake
               gummi bears. Powder cookie gummi bears cupcake wafer chocolate bar

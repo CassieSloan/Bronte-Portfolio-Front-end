@@ -7,7 +7,7 @@
 .pages {
   display: block;
   height: 100vh;
-  background-color: rgb(255, 219, 221);
+  background-color: $light-pink;
   padding: 10% 0 10% 0;
 
   .nav-link {
@@ -21,9 +21,9 @@
     color: black;
     font-family: $menu-font;
     font-weight: 300;
-    background-color: rgb(255, 219, 221);
+    background-color: $light-pink;
     &:hover {
-      background-color: rgb(211, 166, 169);
+      background-color: $dark-pink;
       transition: 0.5s ease-in;
     }
   }

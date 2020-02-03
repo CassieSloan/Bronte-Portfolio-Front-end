@@ -1,46 +1,24 @@
 import React, { Component } from "react";
-import { BrowserRouter, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./../../styles/gallery.scss";
 import ash4 from "./../../images/ash4.jpeg";
 import em3 from "./../../images/em3.jpeg";
 import ash5 from "./../../images/ash5.jpeg";
 import ash6 from "./../../images/ash6.jpeg";
-import axios from "axios";
 
 class Gallery extends Component {
-  state = {
-    images: []
-  };
-
-  async componentDidMount() {
-    const response = await axios.get(
-      `${process.env.REACT_APP_SERVER_URL}/images`
-    );
-    let images = response.data;
-    console.log(images);
-
-    this.setState({ images });
-  }
-
   render() {
-    const { images } = this.state;
     return (
       <>
         <section className="flex-container">
-          {images.reverse().map(image => {
-            return (
-              <>
-                <div className="image-container" key={image.url}>
-                  <img src={image.url} alt={image.name} />
-                </div>
-                {/* click for full page view with post.body */}
-              </>
-            );
-          })}
           {/* P O R T R A I T   B O X  */}
           <div className="top-div">
             <div className="genre-box">
-              <Link to="/gallery/portrait" className="box-text">
+              <Link
+                to="/gallery/portrait"
+                className="box-text"
+                aria-label="portrait photos"
+              >
                 {/* Portrait */}
                 <div
                   className="image1"
@@ -50,9 +28,12 @@ class Gallery extends Component {
                 ></div>
               </Link>
             </div>
-            {/* L A N D S C A P E   B O X  */}
             <div className="genre-box">
-              <Link to="/gallery/landscape" className="box-text">
+              <Link
+                to="/gallery/landscape"
+                className="box-text"
+                aria-label="landscape photos"
+              >
                 {/* Landscape */}
                 <div
                   className="image2"
@@ -67,7 +48,11 @@ class Gallery extends Component {
 
           <div className="bottom-div">
             <div className="genre-box">
-              <Link to="/gallery/black-and-white" className="box-text">
+              <Link
+                to="/gallery/black-and-white"
+                className="box-text"
+                aria-label="black and white photos"
+              >
                 {/* Black and White */}
                 <div
                   className="image3"
@@ -77,9 +62,15 @@ class Gallery extends Component {
                 ></div>
               </Link>
             </div>
+            {/* L A N D S C A P E   B O X  */}
+
             {/* E D I T O R I A L   B O X  */}
             <div className="genre-box">
-              <Link to="/gallery/editorial" className="box-text">
+              <Link
+                to="/gallery/editorial"
+                className="box-text"
+                aria-label="editorial photos"
+              >
                 {/* Editorial */}
                 <div
                   className="image4"
