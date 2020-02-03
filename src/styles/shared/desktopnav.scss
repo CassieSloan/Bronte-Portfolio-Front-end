@@ -15,13 +15,13 @@
       font-family: $heading-font;
       color: rgb(255, 255, 255);
       border-radius: 0.5em;
-      background-color: rgb(255, 219, 221);
+      background-color: $light-pink;
       padding: 10px;
       margin: 2%;
       height: 30px;
 
       &:hover {
-        background-color: rgb(211, 166, 169);
+        background-color: $dark-pink;
         transition: 0.25s ease-in;
       }
     }
