@@ -6,6 +6,6 @@ describe("homepage elements displaying correctly", () => {});
 //     cy.get(".react-multi-carousel-list").should("transform"); //nope transform doesn't work
 //   }); // figure this out later #toohardbasket
 
-//buttons on carousel change images
+//s on carousel change images
 
 //carousel resizes appropriately

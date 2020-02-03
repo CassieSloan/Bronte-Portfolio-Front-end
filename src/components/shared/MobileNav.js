@@ -48,25 +48,26 @@ class MobileNav extends Component {
           className={`hamburger hamburger--slider ${this.getHamClassName()}`}
           onClick={this.onHamburgerClick}
           type="button"
+          aria-label="mobile menu"
         >
           <span class="hamburger-box">
             <span class="hamburger-inner"></span>
           </span>
         </button>
         <div className="pages" style={{ display: `${this.showMobileNav()}` }}>
-          <Link to="/" className="nav-link">
+          <Link to="/" className="nav-link" aria-label="home">
             Home
           </Link>
-          <Link to="/gallery" className="nav-link">
+          <Link to="/gallery" className="nav-link" aria-label="gallery">
             Gallery
           </Link>
-          <Link to="/about" className="nav-link">
+          <Link to="/about" className="nav-link" aria-label="about">
             About
           </Link>
-          <Link to="/contact" className="nav-link">
+          <Link to="/contact" className="nav-link" aria-label="contact">
             Contact
           </Link>
-          <Link to="/blog" className="nav-link">
+          <Link to="/blog" className="nav-link" aria-label="blog">
             Blog
           </Link>
         </div>

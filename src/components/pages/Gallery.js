@@ -14,7 +14,11 @@ class Gallery extends Component {
           {/* P O R T R A I T   B O X  */}
           <div className="top-div">
             <div className="genre-box">
-              <Link to="/gallery/portrait" className="box-text">
+              <Link
+                to="/gallery/portrait"
+                className="box-text"
+                aria-label="portrait photos"
+              >
                 {/* Portrait */}
                 <div
                   className="image1"
@@ -25,7 +29,11 @@ class Gallery extends Component {
               </Link>
             </div>
             <div className="genre-box">
-              <Link to="/gallery/landscape" className="box-text">
+              <Link
+                to="/gallery/landscape"
+                className="box-text"
+                aria-label="landscape photos"
+              >
                 {/* Landscape */}
                 <div
                   className="image2"
@@ -40,7 +48,11 @@ class Gallery extends Component {
 
           <div className="bottom-div">
             <div className="genre-box">
-              <Link to="/gallery/black-and-white" className="box-text">
+              <Link
+                to="/gallery/black-and-white"
+                className="box-text"
+                aria-label="black and white photos"
+              >
                 {/* Black and White */}
                 <div
                   className="image3"
@@ -54,7 +66,11 @@ class Gallery extends Component {
 
             {/* E D I T O R I A L   B O X  */}
             <div className="genre-box">
-              <Link to="/gallery/editorial" className="box-text">
+              <Link
+                to="/gallery/editorial"
+                className="box-text"
+                aria-label="editorial photos"
+              >
                 {/* Editorial */}
                 <div
                   className="image4"
