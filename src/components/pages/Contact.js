@@ -36,7 +36,7 @@ class Contact extends Component {
     const { name, from, number, text } = this.state;
     return (
       <>
-        <div className="flexbox">
+        <div className="contact-flexbox">
           {/* image and text */}
           <div className="info">
             <div className="image-container">
