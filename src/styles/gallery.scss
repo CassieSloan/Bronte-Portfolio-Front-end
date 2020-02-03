@@ -45,8 +45,15 @@
   }
 }
 
-//desktop
+//tablet
 @media screen and (min-width: 550px) {
+  .flex-container {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+//desktop
+@media screen and (min-width: 900px) {
   .flex-container {
     flex-direction: row;
     flex-wrap: nowrap;
