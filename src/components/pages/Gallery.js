@@ -49,7 +49,7 @@ class Gallery extends Component {
           <div className="bottom-div">
             <div className="genre-box">
               <Link
-                to="/gallery/black-and-white"
+                to="/gallery/blackandwhite"
                 className="box-text"
                 aria-label="black and white photos"
               >
