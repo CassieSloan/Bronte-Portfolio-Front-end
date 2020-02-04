@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./../../styles/gallery.scss";
-import ash4 from "./../../images/ash4.jpeg";
-import em3 from "./../../images/em3.jpeg";
-import ash5 from "./../../images/ash5.jpeg";
-import ash6 from "./../../images/ash6.jpeg";
+import bronte2 from "./../../images/bronte2.jpeg";
+import em4 from "./../../images/em4.jpeg";
+import cass3 from "./../../images/cass3.jpeg";
+import tiger from "./../../images/tiger.jpeg";
 
 class Gallery extends Component {
   render() {
@@ -23,11 +23,13 @@ class Gallery extends Component {
                 <div
                   className="image1"
                   style={{
-                    backgroundImage: `url(${ash4})`
+                    backgroundImage: `url(${bronte2})`
                   }}
                 ></div>
               </Link>
             </div>
+            {/* L A N D S C A P E   B O X  */}
+
             <div className="genre-box">
               <Link
                 to="/gallery/landscape"
@@ -38,7 +40,7 @@ class Gallery extends Component {
                 <div
                   className="image2"
                   style={{
-                    backgroundImage: `url(${em3})`
+                    backgroundImage: `url(${tiger})`
                   }}
                 ></div>
               </Link>
@@ -57,12 +59,11 @@ class Gallery extends Component {
                 <div
                   className="image3"
                   style={{
-                    backgroundImage: `url(${ash5})`
+                    backgroundImage: `url(${cass3})`
                   }}
                 ></div>
               </Link>
             </div>
-            {/* L A N D S C A P E   B O X  */}
 
             {/* E D I T O R I A L   B O X  */}
             <div className="genre-box">
@@ -75,7 +76,7 @@ class Gallery extends Component {
                 <div
                   className="image4"
                   style={{
-                    backgroundImage: `url(${ash6})`
+                    backgroundImage: `url(${em4})`
                   }}
                 >
                   {" "}
