@@ -1,7 +1,7 @@
 @import "./variables"; //global variables
 
 .header {
-  font-size: 200%;
+  font-size: 150%;
   text-align: center;
   font-family: $heading-font;
   font-weight: 200;
@@ -10,12 +10,12 @@
 }
 @media screen and (min-width: 320px) {
   .header {
-    font-size: 300%;
+    font-size: 250%;
   }
 }
 
 @media screen and (min-width: 550px) {
   .header {
-    font-size: 400%;
+    font-size: 350%;
   }
 }

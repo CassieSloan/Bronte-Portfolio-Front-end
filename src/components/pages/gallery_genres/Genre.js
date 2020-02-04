@@ -33,6 +33,15 @@ class Genre extends Component {
       console.log(error);
     }
   }
+  //state = {clicked: false}
+
+  //imagePreview = () => {
+  // this.setState = (state) => {
+  //state = {!clicked}
+  //if state.clicked === true
+  //return <Preview/>
+  // }
+  // }
 
   render() {
     const { images } = this.state;
@@ -46,6 +55,7 @@ class Genre extends Component {
               <>
                 <div className="image-container" key={image.url}>
                   <img src={image.url} alt={image.name} />
+                  {/* onClick, render preview component  */}
                 </div>
                 {/* click for full page view with post.body */}
               </>
