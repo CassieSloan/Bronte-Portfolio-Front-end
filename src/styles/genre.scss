@@ -1,4 +1,11 @@
+@import "./shared/variables";
+
 //mobile
+.divider {
+  height: 5px;
+  background-color: $light-pink;
+  margin: 5% 10% 5% 10%;
+}
 .flexbox {
   display: flex;
   flex-direction: column;

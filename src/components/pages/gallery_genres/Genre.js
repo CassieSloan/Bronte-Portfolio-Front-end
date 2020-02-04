@@ -2,35 +2,54 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom"; //method to ascertain route endpoint
 import "./../../../styles/genre.scss"; //style sheet
 import axios from "axios"; //use backend api
-import { setServers } from "dns";
+// import { setServers } from "dns";
 
 class Genre extends Component {
   state = {
-    images: []
+    images: [],
+    pathname: ""
   };
 
-  async componentDidMount() {
-    try {
-      const filteredImages = []; //new array to push into state when populated
+  componentDidMount() {
+    this.retrieveImages();
+  }
 
-      const response = await axios.get("http://localhost:3001/images"); //get images from backend api
-      let images = response.data;
-      //look through images
-      for (let image of images) {
-        let imageCategories = image.category;
-        //find images categories
-        for (let category of imageCategories) {
-          let path = this.props.location.pathname; //finds current path
-          if (path === `/gallery/${category}`) {
-            //if current path matches a category, push image to array
-            filteredImages.push(image);
+  componentDidUpdate() {
+    this.retrieveImages();
+  }
+
+  async retrieveImages() {
+    if (
+      this.props.location.pathname !== "/gallery" &&
+      this.props.location.pathname !== this.state.pathname
+    ) {
+      try {
+        const filteredImages = []; //new array to push into state when populated
+
+        const response = await axios.get("http://localhost:3001/images"); //get images from backend api
+        let images = response.data;
+        //look through images
+        for (let image of images) {
+          let imageCategories = image.category;
+          //find images categories
+          for (let category of imageCategories) {
+            let path = this.props.location.pathname; //finds current path
+            if (path === `/gallery/${category}`) {
+              //if current path matches a category, push image to array
+              filteredImages.push(image);
+            }
           }
         }
-      }
 
-      this.setState({ images: filteredImages }); //add images returned in new array to state
-    } catch (error) {
-      console.log(error);
+        this.setState((state, props) => {
+          return {
+            images: filteredImages, //set array of images as state
+            pathname: props.location.pathname
+          };
+        });
+      } catch (error) {
+        console.log(error);
+      }
     }
   }
   //state = {clicked: false}
@@ -48,6 +67,7 @@ class Genre extends Component {
 
     return (
       <>
+        <div className="divider"></div>
         <div className="flexbox">
           {/* iterate through images  */}
           {images.reverse().map(image => {

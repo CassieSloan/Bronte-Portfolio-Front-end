@@ -24,11 +24,12 @@ class App extends Component {
               <Home />
             </Route>
             {/* G A L L E R Y */}
-            <Route exact path="/gallery">
+            <Route path="/gallery">
               <Gallery />
+              <Genre />
             </Route>
             {/* C A T E G O R Y   P A G E S */}
-            <Route exact path="/gallery/portrait">
+            {/* <Route exact path="/gallery/portrait">
               <Gallery />
               <Genre />
             </Route>
@@ -46,7 +47,7 @@ class App extends Component {
             <Route exact path="/gallery/blackandwhite">
               <Gallery />
               <Genre />
-            </Route>
+            </Route> */}
             {/* C O N T A C T */}
             <Route exact path="/contact">
               <Contact />
