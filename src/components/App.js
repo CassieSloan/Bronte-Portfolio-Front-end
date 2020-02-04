@@ -29,18 +29,22 @@ class App extends Component {
             </Route>
             {/* C A T E G O R Y   P A G E S */}
             <Route exact path="/gallery/portrait">
+              <Gallery />
               <Genre />
             </Route>
 
             <Route exact path="/gallery/editorial">
+              <Gallery />
               <Genre />
             </Route>
 
             <Route exact path="/gallery/landscape">
+              <Gallery />
               <Genre />
             </Route>
 
             <Route exact path="/gallery/blackandwhite">
+              <Gallery />
               <Genre />
             </Route>
             {/* C O N T A C T */}
