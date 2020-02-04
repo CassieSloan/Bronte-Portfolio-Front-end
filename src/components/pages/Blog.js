@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import axios from "axios";
+import axios from "axios"; //hit backend api
 import "./../../styles/blog.scss";
 
 class Blog extends Component {
@@ -8,13 +8,18 @@ class Blog extends Component {
   };
 
   async componentDidMount() {
-    const response = await axios.get(
-      `${process.env.REACT_APP_SERVER_URL}/posts`
-    );
-    let posts = response.data;
-    console.log(posts);
+    try {
+      const response = await axios.get(
+        "http://localhost:3001/posts"
+        // `${process.env.REACT_APP_SERVER_URL}/posts`
+      );
+      let posts = response.data;
+      console.log(posts);
 
-    this.setState({ posts });
+      this.setState({ posts });
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   render() {
