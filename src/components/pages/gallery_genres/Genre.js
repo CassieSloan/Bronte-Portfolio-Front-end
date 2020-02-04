@@ -9,25 +9,26 @@ class Genre extends Component {
     images: []
   };
 
-  //get pictures from back end and set state
   async componentDidMount() {
     try {
-      const filteredImages = [];
+      const filteredImages = []; //new array to push into state when populated
 
-      const response = await axios.get("http://localhost:3001/images");
+      const response = await axios.get("http://localhost:3001/images"); //get images from backend api
       let images = response.data;
-      console.log(images);
+      //look through images
       for (let image of images) {
         let imageCategories = image.category;
+        //find images categories
         for (let category of imageCategories) {
           let path = this.props.location.pathname; //finds current path
           if (path === `/gallery/${category}`) {
+            //if current path matches a category, push image to array
             filteredImages.push(image);
           }
         }
       }
 
-      this.setState({ images: filteredImages });
+      this.setState({ images: filteredImages }); //add images returned in new array to state
     } catch (error) {
       console.log(error);
     }
@@ -39,6 +40,7 @@ class Genre extends Component {
     return (
       <>
         <div className="flexbox">
+          {/* iterate through images  */}
           {images.reverse().map(image => {
             return (
               <>
