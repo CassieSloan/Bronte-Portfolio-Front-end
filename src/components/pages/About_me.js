@@ -4,6 +4,7 @@ import camera from "./../../images/icons/icons8-camera-50.png";
 import photoshop from "./../../images/icons/icons8-adobe-photoshop-50.png";
 import turtle from "./../../images/icons/icons8-turtle-50-3.png";
 import makeup from "./../../images/icons/icons8-face-powder-50.png";
+import bronte from "./../../images/bronte.jpeg";
 
 class Aboutme extends Component {
   render() {
@@ -12,10 +13,7 @@ class Aboutme extends Component {
         <div className="flex-box">
           <section className="images-block">
             <div className="image-container">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT0CqI8Xtux5jFCZApNESuolAhqV1Ba_OkXlAbZxlH1OvUBvHg9"
-                alt="portrait of Bronte"
-              ></img>
+              <img src={bronte} alt="portrait of Bronte"></img>
             </div>
             <section className="icon-container">
               <img src={camera} alt="camera icon"></img>

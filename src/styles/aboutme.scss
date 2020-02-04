@@ -2,7 +2,7 @@
 
 .flex-box {
   margin: $screen-margin;
-  margin-top: 10%;
+  margin-top: 5%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -58,8 +58,9 @@
   .flex-box {
     flex-direction: row;
     .images-block {
+      width: 50%;
       .image-container {
-        width: 80%;
+        width: 100%;
         margin: none;
       }
       .icon-container {
