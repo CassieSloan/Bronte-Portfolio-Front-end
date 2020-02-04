@@ -19,22 +19,35 @@ class App extends Component {
           <Header />
 
           <Switch>
+            {/* H O M E */}
             <Route exact path="/">
               <Home />
             </Route>
-
+            {/* G A L L E R Y */}
             <Route exact path="/gallery">
               <Gallery />
             </Route>
-
+            {/* C A T E G O R Y   P A G E S */}
             <Route exact path="/gallery/portrait">
               <Genre />
             </Route>
 
+            <Route exact path="/gallery/editorial">
+              <Genre />
+            </Route>
+
+            <Route exact path="/gallery/landscape">
+              <Genre />
+            </Route>
+
+            <Route exact path="/gallery/blackandwhite">
+              <Genre />
+            </Route>
+            {/* C O N T A C T */}
             <Route exact path="/contact">
               <Contact />
             </Route>
-
+            {/* BLOG */}
             <Route exact path="/blog">
               <Blog />
             </Route>
