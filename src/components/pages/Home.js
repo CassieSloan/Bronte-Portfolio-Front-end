@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import "./../../styles/home.scss";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import ash1 from "./../../images/ash1.jpeg";
+import cass from "./../../images/cass.jpeg";
 import ash2 from "./../../images/ash2.jpeg";
 import em1 from "./../../images/em1.jpeg";
-import em2 from "./../../images/em2.jpeg";
+import bronte from "./../../images/bronte.jpeg";
 import ash3 from "./../../images/ash3.jpeg";
 
 class Home extends Component {
@@ -54,7 +54,7 @@ class Home extends Component {
         <div
           className="img-div1"
           style={{
-            backgroundImage: `url(${ash1})`
+            backgroundImage: `url(${cass})`
           }}
         ></div>
         <div
@@ -72,7 +72,7 @@ class Home extends Component {
         <div
           className="img-div4"
           style={{
-            backgroundImage: `url(${em2})`
+            backgroundImage: `url(${bronte})`
           }}
         ></div>
         <div
