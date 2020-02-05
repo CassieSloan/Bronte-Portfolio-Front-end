@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom"; //method to ascertain route endpoint
 import "./../../../styles/genre.scss"; //style sheet
 import axios from "axios"; //use backend api
+import Preview from "./Preview";
 // import { setServers } from "dns";
 
 class Genre extends Component {
@@ -57,11 +58,40 @@ class Genre extends Component {
       }
     }
   }
+  previewClose = () => {
+    this.setState({ pictureClicked: false });
+  };
 
-  onPictureClick = () => {
-    this.setState(state => {
-      return { pictureClicked: !state.pictureClicked };
-    });
+  onPictureClick = (url, name, caption) => {
+    return event => {
+      this.setState(state => {
+        return {
+          pictureClicked: true,
+          currentImage: url,
+          currentName: name,
+          currentCaption: caption
+        };
+      });
+    };
+  };
+
+  showImagePreview = () => {
+    const {
+      currentImage,
+      currentName,
+      pictureClicked,
+      currentCaption
+    } = this.state;
+    if (pictureClicked === true) {
+      return (
+        <Preview
+          url={currentImage}
+          name={currentName}
+          caption={currentCaption}
+          previewClose={this.previewClose}
+        />
+      );
+    }
   };
 
   showCaption = () => {
@@ -78,7 +108,10 @@ class Genre extends Component {
     return (
       <>
         <div className="divider"></div>
+
         <div className="flexbox">
+          <div>{this.showImagePreview()}</div>
+
           {/* iterate through images  */}
           {images.reverse().map(image => {
             return (
@@ -86,17 +119,14 @@ class Genre extends Component {
                 <div
                   className="image-container"
                   key={image.url}
-                  onClick={this.onPictureClick}
+                  onClick={this.onPictureClick(
+                    image.url,
+                    image.name,
+                    image.caption
+                  )}
                 >
                   <img src={image.url} alt={image.name} />
                 </div>
-                {/* click for full page view with image.body */}
-                <p
-                  className="caption"
-                  style={{ display: `${this.showCaption()}` }}
-                >
-                  {image.caption}
-                </p>
               </>
             );
           })}
