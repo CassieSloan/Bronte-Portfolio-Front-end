@@ -7,7 +7,8 @@ import axios from "axios"; //use backend api
 class Genre extends Component {
   state = {
     images: [],
-    pathname: ""
+    pathname: "",
+    pictureClicked: false
   };
 
   componentDidMount() {
@@ -19,6 +20,7 @@ class Genre extends Component {
   }
 
   async retrieveImages() {
+    //grab images according to category and change state
     if (
       this.props.location.pathname !== "/gallery" &&
       this.props.location.pathname !== this.state.pathname
@@ -26,7 +28,10 @@ class Genre extends Component {
       try {
         const filteredImages = []; //new array to push into state when populated
 
-        const response = await axios.get("http://localhost:3001/images"); //get images from backend api
+        const response = await axios.get(
+          //`${process.env.REACT_APP_SERVER_URL}/images`
+          "http://localhost:3001/images"
+        ); //get images from backend api
         let images = response.data;
         //look through images
         for (let image of images) {
@@ -52,15 +57,20 @@ class Genre extends Component {
       }
     }
   }
-  //state = {clicked: false}
 
-  //imagePreview = () => {
-  // this.setState = (state) => {
-  //state = {!clicked}
-  //if state.clicked === true
-  //return <Preview/>
-  // }
-  // }
+  onPictureClick = () => {
+    this.setState(state => {
+      return { pictureClicked: !state.pictureClicked };
+    });
+  };
+
+  showCaption = () => {
+    if (this.state.pictureClicked === true) {
+      return "block";
+    } else {
+      return "none";
+    }
+  };
 
   render() {
     const { images } = this.state;
@@ -73,11 +83,20 @@ class Genre extends Component {
           {images.reverse().map(image => {
             return (
               <>
-                <div className="image-container" key={image.url}>
+                <div
+                  className="image-container"
+                  key={image.url}
+                  onClick={this.onPictureClick}
+                >
                   <img src={image.url} alt={image.name} />
-                  {/* onClick, render preview component  */}
                 </div>
-                {/* click for full page view with post.body */}
+                {/* click for full page view with image.body */}
+                <p
+                  className="caption"
+                  style={{ display: `${this.showCaption()}` }}
+                >
+                  {image.caption}
+                </p>
               </>
             );
           })}
