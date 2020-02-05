@@ -14,12 +14,11 @@ class Gallery extends Component {
           {/* P O R T R A I T   B O X  */}
           <div className="top-div">
             <div className="genre-box">
-              <Link
-                to="/gallery/portrait"
-                className="box-text"
-                aria-label="portrait photos"
-              >
-                {/* Portrait */}
+              <div className="box-text">
+                <p>Portrait</p>
+              </div>
+
+              <Link to="/gallery/portrait" aria-label="portrait photos">
                 <div
                   className="image1"
                   style={{
@@ -28,15 +27,15 @@ class Gallery extends Component {
                 ></div>
               </Link>
             </div>
+
             {/* L A N D S C A P E   B O X  */}
 
             <div className="genre-box">
-              <Link
-                to="/gallery/landscape"
-                className="box-text"
-                aria-label="landscape photos"
-              >
-                {/* Landscape */}
+              <div className="box-text">
+                <p>Nature</p>
+              </div>
+
+              <Link to="/gallery/landscape" aria-label="landscape photos">
                 <div
                   className="image2"
                   style={{
@@ -46,16 +45,19 @@ class Gallery extends Component {
               </Link>
             </div>
           </div>
+
           {/* B L A C K   A N D   W H I T E   B O X  */}
 
           <div className="bottom-div">
             <div className="genre-box">
+              <div className="box-text">
+                <p>Black and</p> <p>white</p>
+              </div>
+
               <Link
                 to="/gallery/blackandwhite"
-                className="box-text"
                 aria-label="black and white photos"
               >
-                {/* Black and White */}
                 <div
                   className="image3"
                   style={{
@@ -66,13 +68,13 @@ class Gallery extends Component {
             </div>
 
             {/* E D I T O R I A L   B O X  */}
+
             <div className="genre-box">
-              <Link
-                to="/gallery/editorial"
-                className="box-text"
-                aria-label="editorial photos"
-              >
-                {/* Editorial */}
+              <div className="box-text">
+                <p>Editorial</p>
+              </div>
+
+              <Link to="/gallery/editorial" aria-label="editorial photos">
                 <div
                   className="image4"
                   style={{
