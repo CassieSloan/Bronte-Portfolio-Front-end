@@ -22,7 +22,7 @@
     "build": "react-scripts build",
     "test": "cypress open",
     "eject": "react-scripts eject",
-    "deploy": "git checkout master && npm run build && aws s3 sync build/ s3://bronte-portfolio-frontend"
+    "deploy": "git checkout master && npm run build && aws s3 sync build/ s3://brontedavisphotography"
   },
   "eslintConfig": {
     "extends": "react-app"

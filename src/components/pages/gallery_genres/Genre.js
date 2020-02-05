@@ -30,8 +30,8 @@ class Genre extends Component {
         const filteredImages = []; //new array to push into state when populated
 
         const response = await axios.get(
-          //`${process.env.REACT_APP_SERVER_URL}/images`
-          "http://localhost:3001/images"
+          `${process.env.REACT_APP_SERVER_URL}/images`
+          // "http://localhost:3001/images"
         ); //get images from backend api
         let images = response.data;
         //look through images
