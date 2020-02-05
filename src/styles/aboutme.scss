@@ -39,6 +39,7 @@
         background-position: $backgroundposition;
         background-color: black;
         transition: all 1s ease-in;
+        padding-bottom: 10%;
         &:hover {
           transform: scale(1.2);
         }
@@ -60,7 +61,8 @@
     .images-block {
       width: 50%;
       .image-container {
-        width: 100%;
+        // width: 100%;
+        height: 70%;
         margin: none;
       }
       .icon-container {
