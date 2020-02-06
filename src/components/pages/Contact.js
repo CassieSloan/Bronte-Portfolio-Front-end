@@ -3,14 +3,20 @@ import "./../../styles/contact.scss";
 import axios from "axios";
 import TextField from "@material-ui/core/TextField";
 import bronte2 from "./../../images/bronte2.jpeg";
+import LoadingAnimation from "../LoadingAnimation";
 
 class Contact extends Component {
   state = {
     name: "",
     from: "",
     number: "",
-    text: ""
+    text: "",
+    loading: false
   };
+
+  componentDidMount() {
+    this.setState({ loading: true });
+  }
 
   onInputChange = event => {
     const { name, value } = event.target;
@@ -34,9 +40,10 @@ class Contact extends Component {
   };
 
   render() {
-    const { name, from, number, text } = this.state;
+    const { name, from, number, text, loading } = this.state;
     return (
       <>
+        {loading && <LoadingAnimation />}
         <div className="contact-flexbox">
           {/* image and text */}
           <div className="info">

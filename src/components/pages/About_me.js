@@ -5,11 +5,22 @@ import photoshop from "./../../images/icons/icons8-adobe-photoshop-50.png";
 import turtle from "./../../images/icons/icons8-turtle-50-3.png";
 import makeup from "./../../images/icons/icons8-face-powder-50.png";
 import bronte from "./../../images/bronte.jpeg";
+import LoadingAnimation from "./../LoadingAnimation";
 
 class Aboutme extends Component {
+  state = {
+    loading: false
+  };
+
+  componentDidMount() {
+    this.setState({ loading: true });
+  }
+
   render() {
+    const { loading } = this.state;
     return (
       <>
+        {loading && <LoadingAnimation />}
         <div className="flex-box">
           <section className="images-block">
             <div className="image-container">

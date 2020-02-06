@@ -1,14 +1,17 @@
 import React, { Component } from "react";
 import axios from "axios"; //hit backend api
 import "./../../styles/blog.scss";
+import LoadingAnimation from "../LoadingAnimation";
 
 class Blog extends Component {
   state = {
-    posts: []
+    posts: [],
+    loading: false
   };
 
   async componentDidMount() {
     try {
+      this.setState({ loading: true });
       const response = await axios.get(
         `${process.env.REACT_APP_SERVER_URL}/posts`
       );
@@ -22,9 +25,10 @@ class Blog extends Component {
   }
 
   render() {
-    const { posts } = this.state;
+    const { posts, loading } = this.state;
     return (
       <>
+        {loading && <LoadingAnimation />}
         <div className="blog-post-container">
           <div className="text-container">
             {posts.reverse().map(post => {

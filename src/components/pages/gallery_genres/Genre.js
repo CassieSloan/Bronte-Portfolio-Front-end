@@ -3,13 +3,15 @@ import { withRouter } from "react-router-dom"; //method to ascertain route endpo
 import "./../../../styles/genre.scss"; //style sheet
 import axios from "axios"; //use backend api
 import Preview from "./Preview";
+import LoadingAnimation from "./../../LoadingAnimation";
 // import { setServers } from "dns";
 
 class Genre extends Component {
   state = {
     images: [],
     pathname: "",
-    pictureClicked: false
+    pictureClicked: false,
+    loading: false
   };
 
   componentDidMount() {
@@ -22,11 +24,13 @@ class Genre extends Component {
 
   async retrieveImages() {
     //grab images according to category and change state
+
     if (
       this.props.location.pathname !== "/gallery" &&
       this.props.location.pathname !== this.state.pathname
     ) {
       try {
+        this.setState({ loading: true });
         const filteredImages = []; //new array to push into state when populated
 
         const response = await axios.get(
@@ -102,10 +106,11 @@ class Genre extends Component {
   };
 
   render() {
-    const { images } = this.state;
+    const { images, loading } = this.state;
 
     return (
       <>
+        {loading && <LoadingAnimation />}
         <div className="divider"></div>
 
         <div className="flexbox">

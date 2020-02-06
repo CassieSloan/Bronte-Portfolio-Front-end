@@ -5,11 +5,22 @@ import bronte2 from "./../../images/bronte2.jpeg";
 import em4 from "./../../images/em4.jpeg";
 import cass3 from "./../../images/cass3.jpeg";
 import tiger from "./../../images/tiger.jpeg";
+import LoadingAnimation from "../LoadingAnimation";
 
 class Gallery extends Component {
+  state = {
+    loading: false
+  };
+
+  componentDidMount() {
+    this.setState({ loading: true });
+  }
+
   render() {
+    const { loading } = this.state;
     return (
       <>
+        {loading && <LoadingAnimation />}
         <section className="flex-container">
           {/* P O R T R A I T   B O X  */}
           <div className="top-div">
